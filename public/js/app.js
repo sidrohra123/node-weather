@@ -11,9 +11,10 @@ weatherForm.addEventListener('submit', (e) => {
 });
 
 function getWeather(location){
-const ourApi = 'http://localhost:3000/weather?address='+location
+const ourApi = '/weather?address='+location
 messageOne.textContent = 'loading...'
 messageTwo.textContent = ''
+
 fetch(ourApi).then((response) => {
     if(response){
         response.json().then((data) => {
